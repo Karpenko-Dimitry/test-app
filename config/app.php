@@ -160,6 +160,9 @@ return [
          * Package Service Providers...
          */
 
+        App\Services\ApiRequestService\ApiRequestServiceProvider::class,
+        App\Services\SyncUsersService\SyncUsersServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -182,7 +185,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+         'ApiRequest' => App\Services\ApiRequestService\Facades\ApiRequest::class,
+         'SyncUsers' => App\Services\SyncUsersService\Facades\SyncUsers::class,
     ])->toArray(),
 
 ];
